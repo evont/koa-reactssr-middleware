@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "reactssr": "./bin.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evont/koa-reactssr-middleware.git"
@@ -21,5 +24,20 @@
   "bugs": {
     "url": "https://github.com/evont/koa-reactssr-middleware/issues"
   },
-  "homepage": "https://github.com/evont/koa-reactssr-middleware#readme"
+  "homepage": "https://github.com/evont/koa-reactssr-middleware#readme",
+  "dependencies": {
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "webpack": "^4.28.3",
+    "webpack-dev-middleware": "^3.5.0",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
 }
