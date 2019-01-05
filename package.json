@@ -4,7 +4,9 @@
   "description": "a react ssr middleware for koa",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && npm run build:client && npm run build:server",
+    "build:client": "cross-env NODE_ENV=production webpack --config config/webpack.client.conf.js --progress --hide-modules",
+    "build:server": "cross-env NODE_ENV=production webpack --config config/webpack.server.conf.js --progress --hide-modules"
   },
   "bin": {
     "reactssr": "./bin.js"
@@ -26,18 +28,29 @@
   },
   "homepage": "https://github.com/evont/koa-reactssr-middleware#readme",
   "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "cross-env": "^5.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "koa": "^2.6.2",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "react": "^16.7.0",
+    "react-async-bootstrapper": "^2.1.1",
     "react-dom": "^16.7.0",
+    "react-server-renderer": "^1.1.1",
+    "sw-precache-webpack-plugin": "^0.11.5",
     "webpack": "^4.28.3",
     "webpack-dev-middleware": "^3.5.0",
     "webpack-hot-middleware": "^2.24.3",
     "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.0"
   }
 }

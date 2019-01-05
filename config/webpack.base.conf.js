@@ -66,7 +66,7 @@ module.exports = (isProd = true) => {
             options: {
               presets: [
                 [
-                  '@babel/env',
+                  '@babel/preset-env',
                   {
                     modules: false,
                     exclude: [
@@ -75,11 +75,10 @@ module.exports = (isProd = true) => {
                     ],
                   },
                 ],
+                "@babel/preset-react",
               ],
               plugins: [
                 "dynamic-import-webpack",
-                "@babel/plugin-proposal-class-properties",
-                ["@babel/plugin-proposal-decorators", { "legacy": true }],
               ]
             }            
           }
