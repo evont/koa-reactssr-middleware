@@ -1,0 +1,25 @@
+{
+  "name": "koa-reactssr-middleware",
+  "version": "1.0.0",
+  "description": "a react ssr middleware for koa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evont/koa-reactssr-middleware.git"
+  },
+  "keywords": [
+    "react",
+    "ssr",
+    "koa",
+    "middlware"
+  ],
+  "author": "Evont <evontgoh@foxmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evont/koa-reactssr-middleware/issues"
+  },
+  "homepage": "https://github.com/evont/koa-reactssr-middleware#readme"
+}
