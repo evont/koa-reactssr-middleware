@@ -1,0 +1,14 @@
+{
+  "name": "koa-reactssr-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.6.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-reactssr-middleware": "0.0.2"
+  }
+}
