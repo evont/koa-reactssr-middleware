@@ -64,22 +64,15 @@ module.exports = (isProd = true) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    modules: false,
-                    exclude: [
-                      'babel-plugin-transform-async-to-generator',
-                      'babel-plugin-transform-regenerator',
-                    ],
-                  },
-                ],
-                "@babel/preset-react",
+              "presets": [
+                ["env", {
+                  "modules": false,
+                  "targets": {
+                    "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+                  }
+                }]
               ],
-              plugins: [
-                "dynamic-import-webpack",
-              ]
+              "plugins": ["transform-runtime", "syntax-dynamic-import"]
             }            
           }
         },

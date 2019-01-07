@@ -24,19 +24,17 @@ function extend(obj, obj2) {
 }
 
 function createRenderer(bundle, distPath, options) {
-  const result = createBundleRenderer(
+  return createBundleRenderer(
       bundle,
-      {
-        ...options,
+      Object.assign(options, {
         basedir: distPath,
-        runInNewContext: false,
         cache: LRU({
           max: 1000,
           maxAge: 1000 * 60 * 15
         }),
-      }
+        runInNewContext: false
+      })
   );
-  return result;
 }
 
 function render(renderer, title, ctx) {
@@ -102,7 +100,11 @@ exports = module.exports = function(app, options = {}) {
       app,
       templatePath,
       (bundle, options) => {
-        renderer = createRenderer(bundle, distPath, options);
+        try {
+          renderer = createRenderer(bundle, distPath, options);
+        } catch(e) {
+          console.error(e);
+        }
       }
     )
   }

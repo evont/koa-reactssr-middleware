@@ -1,6 +1,3 @@
 /node_modules
-/exampless/node_modules
-/exampless/dist
 .ssrconfig
 /dist
-/src
