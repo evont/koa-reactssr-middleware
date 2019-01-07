@@ -28,7 +28,7 @@ function createRenderer(bundle, distPath, options) {
       bundle,
       Object.assign(options, {
         basedir: distPath,
-        cache: LRU({
+        cache: new LRU({
           max: 1000,
           maxAge: 1000 * 60 * 15
         }),

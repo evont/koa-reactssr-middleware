@@ -9,7 +9,6 @@ var INVALID_MSG = 'Invalid server-rendering bundle format. Should be a string ' 
     "{\n  entry: string;\n  files: { [filename: string]: string; };\n  maps: { [filename: string]: string; };\n}\n";
 function createBundleRendererCreator(createRenderer) {
     return function createBundleRenderer(bundle, rendererOptions) {
-        console.log(bundle, rendererOptions);
         if (rendererOptions === void 0) { rendererOptions = {}; }
         var files;
         var entry;
