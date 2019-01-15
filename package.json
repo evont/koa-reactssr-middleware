@@ -1,6 +1,6 @@
 {
   "name": "koa-reactssr-middleware",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a react ssr middleware for koa",
   "main": "index.js",
   "scripts": {
